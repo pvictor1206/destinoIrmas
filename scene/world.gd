@@ -20,6 +20,9 @@ var currentState = gameStates.START
 @onready var characterClass = load("res://character/character.tscn")
 @onready var characterNode = $character
 
+@onready var sceneClass = load("res://scene/scenario/scenario.tscn")
+@onready var sceneNode = $scene
+
 @onready var floorClass = load("res://objects/floor/floor.tscn")
 
 
@@ -31,6 +34,7 @@ var currentState = gameStates.START
 # COMMON VARIABLES
 var player
 var floor
+var scene
 
 
 func setState(s):
@@ -51,4 +55,5 @@ func _process(delta):
 func start():
 	player = Global.sceneCreate(characterClass, characterNode, 'player')
 	floor = Global.sceneCreate(floorClass, objectsNode, 'floor')
+	scene = Global.sceneCreate(sceneClass, sceneNode, 'scene')
 	setState(gameStates.NONE)

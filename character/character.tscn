@@ -63,7 +63,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_u1han")
 }],
 "loop": true,
-"name": &"Idle",
+"name": &"idle",
 "speed": 5.0
 }, {
 "frames": [{
@@ -104,7 +104,5 @@ texture_filter = 1
 position = Vector2(116.25, 85.25)
 scale = Vector2(5.15625, 5.15625)
 sprite_frames = SubResource("SpriteFrames_va8po")
-animation = &"Idle"
-autoplay = "Idle"
-frame = 2
-frame_progress = 0.522972
+animation = &"idle"
+autoplay = "idle"
