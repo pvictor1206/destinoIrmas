@@ -96,12 +96,12 @@ animations = [{
 script = ExtResource("1_3gtsm")
 
 [node name="collision" type="CollisionShape2D" parent="player"]
-position = Vector2(115.5, 89)
+position = Vector2(78.5, 539)
 shape = SubResource("CircleShape2D_tbqso")
 
 [node name="anim" type="AnimatedSprite2D" parent="player"]
 texture_filter = 1
-position = Vector2(116.25, 85.25)
+position = Vector2(79.25, 535.25)
 scale = Vector2(5.15625, 5.15625)
 sprite_frames = SubResource("SpriteFrames_va8po")
 animation = &"idle"
