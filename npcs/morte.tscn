@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://b0hff6geuwc6s"]
+
+[ext_resource type="Texture2D" uid="uid://c063663mnvm0y" path="res://assents/npcs/morte-0.png" id="1_shlmq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kw8ri"]
+atlas = ExtResource("1_shlmq")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wa80i"]
+atlas = ExtResource("1_shlmq")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w6onl"]
+atlas = ExtResource("1_shlmq")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jllbo"]
+atlas = ExtResource("1_shlmq")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0etar"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kw8ri")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wa80i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w6onl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jllbo")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="Morte" type="Node2D"]
+
+[node name="MorteAnimation" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(42.25, 45.25)
+scale = Vector2(5.34375, 5.34375)
+sprite_frames = SubResource("SpriteFrames_0etar")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.361664
