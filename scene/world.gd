@@ -23,8 +23,6 @@ var currentScene = gameScene.MYSTERIOUS_PLACE
 
 @onready var sceneNode = $scene
 
-@onready var objectClass = load("res://object/objects.tscn")
-
 
 @onready var objectsNode = $object
 
@@ -42,7 +40,6 @@ var counterScene = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player = Global.sceneCreate(characterClass, characterNode, 'currentPlayer')
-	floor = Global.sceneCreate(objectClass, objectsNode, 'currentObjects')
 
 func _physics_process(delta):
 	if Global.currentState == Global.gameStates.START:
@@ -57,16 +54,22 @@ func _process(delta):
 func start(numberScenario):
 	
 	var sceneClass = load("res://scene/scenario/scenario0" + str(numberScenario) + ".tscn")
+	var objectClass = load("res://object/objects0" + str(numberScenario) + ".tscn")
 	
 	# Remove nodes in scene
-	if $scene.get_child_count() > 0:
-		var children = $scene.get_children()
-		for c in children:
+	if $scene.get_child_count() > 0 and $object.get_child_count() > 0:
+		var childrenScene = $scene.get_children()
+		var childrenObject = $object.get_children()
+		for c in childrenScene:
 			$scene.remove_child(c)
+			c.queue_free()
+		for c in childrenObject:
+			$object.remove_child(c)
 			c.queue_free()
 
 
 	scene = Global.sceneCreate(sceneClass, sceneNode, 'currentScene')
+	floor = Global.sceneCreate(objectClass, objectsNode, 'currentObjects')
 	Global.setState(Global.gameStates.TALK_NPC)
 
 func newScene():
