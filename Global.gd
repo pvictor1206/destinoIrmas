@@ -6,3 +6,10 @@ func sceneCreate(path,parent,name = 'newNode'):
 	var newNode = nodeClass.instantiate()
 	newNode.name = name
 	parent.add_child(newNode)
+
+enum gameStates {NONE, START, TALK_NPC, NEXT_SCENE}
+
+var currentState = gameStates.START
+
+func setState(s):
+	Global.currentState = s

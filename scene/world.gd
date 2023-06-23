@@ -1,7 +1,7 @@
 extends Node2D
 
 # STATE MACHINE
-enum gameStates {NONE, START, TALK_NPC, NEXT_SCENE}
+
 enum gameScene {
 	MYSTERIOUS_PLACE,
 	GARDEN,
@@ -12,21 +12,21 @@ enum gameScene {
 	HALL,
 	VILLAGE,
 	THEATER_END,
-	}
+}
 
-var currentState = gameStates.START
+
+var currentScene = gameScene.MYSTERIOUS_PLACE
 
 # ONREADY
 @onready var characterClass = load("res://character/character.tscn")
 @onready var characterNode = $character
 
-@onready var sceneClass = load("res://scene/scenario/scenario.tscn")
 @onready var sceneNode = $scene
 
-@onready var floorClass = load("res://objects/floor/floor.tscn")
+@onready var objectClass = load("res://object/objects.tscn")
 
 
-@onready var objectsNode = $objects
+@onready var objectsNode = $object
 
 
 
@@ -36,24 +36,41 @@ var player
 var floor
 var scene
 
+var counterScene = 0
 
-func setState(s):
-	currentState = s
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	player = Global.sceneCreate(characterClass, characterNode, 'currentPlayer')
+	floor = Global.sceneCreate(objectClass, objectsNode, 'currentObjects')
 
 func _physics_process(delta):
-	if currentState == gameStates.START:
-		start()
+	if Global.currentState == Global.gameStates.START:
+		start(counterScene)
+	elif Global.currentState == Global.gameStates.NEXT_SCENE:
+		newScene()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
-func start():
-	player = Global.sceneCreate(characterClass, characterNode, 'player')
-	floor = Global.sceneCreate(floorClass, objectsNode, 'floor')
-	scene = Global.sceneCreate(sceneClass, sceneNode, 'scene')
-	setState(gameStates.NONE)
+func start(numberScenario):
+	
+	var sceneClass = load("res://scene/scenario/scenario0" + str(numberScenario) + ".tscn")
+	
+	# Remove nodes in scene
+	if $scene.get_child_count() > 0:
+		var children = $scene.get_children()
+		for c in children:
+			$scene.remove_child(c)
+			c.queue_free()
+
+
+	scene = Global.sceneCreate(sceneClass, sceneNode, 'currentScene')
+	Global.setState(Global.gameStates.TALK_NPC)
+
+func newScene():
+	if counterScene != 8:
+		counterScene += 1
+		
+	Global.setState(Global.gameStates.START)

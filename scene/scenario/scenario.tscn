@@ -1,10 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bhw8f1x4fgnqk"]
+[gd_scene load_steps=2 format=3 uid="uid://ccjqadhvr0pe"]
 
-[ext_resource type="Texture2D" uid="uid://cb43jerdr08x1" path="res://assents/sceneImage/cenario01.jpg" id="1_aeube"]
+[ext_resource type="Script" path="res://scene/scenario/scenario.gd" id="1_lniph"]
 
 [node name="scenario" type="Node2D"]
+script = ExtResource("1_lniph")
 
-[node name="SpriteMap01" type="Sprite2D" parent="."]
+[node name="SpriteMap" type="Sprite2D" parent="."]
 position = Vector2(580, 466)
 scale = Vector2(1.1748, 1.1748)
-texture = ExtResource("1_aeube")
