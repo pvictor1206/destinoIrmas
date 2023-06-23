@@ -10,5 +10,3 @@ script = ExtResource("1_qp012")
 [node name="object" type="Node2D" parent="."]
 
 [node name="character" type="Node2D" parent="."]
-
-[node name="npc" type="Node2D" parent="."]

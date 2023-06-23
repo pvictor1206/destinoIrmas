@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxvwf5u54u7ln"]
+
+[ext_resource type="Texture2D" uid="uid://ni1ndgt5hi5w" path="res://assents/npcs/ruth-0.png" id="1_vyv0a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ise47"]
+atlas = ExtResource("1_vyv0a")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qslpb"]
+atlas = ExtResource("1_vyv0a")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iqydi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ise47")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qslpb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Ruth" type="Node2D"]
+
+[node name="RuthAnimation" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(29.875, 58.75)
+scale = Vector2(3.39063, 3.39063)
+sprite_frames = SubResource("SpriteFrames_iqydi")
+autoplay = "default"
+frame_progress = 0.131966
