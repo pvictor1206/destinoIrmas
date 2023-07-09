@@ -1,31 +1,10 @@
 extends Node2D
 
-# STATE MACHINE
-
-enum gameScene {
-	MYSTERIOUS_PLACE,
-	GARDEN,
-	LIVING_ROOM,
-	ROOM,
-	THEATER_INIT,
-	FITTING_ROOM,
-	HALL,
-	VILLAGE,
-	THEATER_END,
-}
-
-
-var currentScene = gameScene.MYSTERIOUS_PLACE
-
 # ONREADY
 @onready var characterClass = load("res://character/character.tscn")
 @onready var characterNode = $character
 
 @onready var sceneNode = $scene
-
-
-@onready var objectsNode = $object
-
 
 
 
@@ -54,22 +33,16 @@ func _process(delta):
 func start(numberScenario):
 	
 	var sceneClass = load("res://scene/scenario/scenario0" + str(numberScenario) + ".tscn")
-	var objectClass = load("res://object/objects0" + str(numberScenario) + ".tscn")
 	
 	# Remove nodes in scene
-	if $scene.get_child_count() > 0 and $object.get_child_count() > 0:
+	if $scene.get_child_count() > 0:
 		var childrenScene = $scene.get_children()
-		var childrenObject = $object.get_children()
 		for c in childrenScene:
 			$scene.remove_child(c)
-			c.queue_free()
-		for c in childrenObject:
-			$object.remove_child(c)
 			c.queue_free()
 
 
 	scene = Global.sceneCreate(sceneClass, sceneNode, 'currentScene')
-	floor = Global.sceneCreate(objectClass, objectsNode, 'currentObjects')
 	Global.setState(Global.gameStates.TALK_NPC)
 
 func newScene():
