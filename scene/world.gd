@@ -13,7 +13,6 @@ var player
 var floor
 var scene
 
-var counterScene = 0
 
 
 # Called when the node enters the scene tree for the first time.
@@ -22,7 +21,7 @@ func _ready():
 
 func _physics_process(delta):
 	if Global.currentState == Global.gameStates.START:
-		start(counterScene)
+		start(Global.counterScene)
 	elif Global.currentState == Global.gameStates.NEXT_SCENE:
 		newScene()
 
@@ -46,7 +45,7 @@ func start(numberScenario):
 	Global.setState(Global.gameStates.TALK_NPC)
 
 func newScene():
-	if counterScene != 8:
-		counterScene += 1
+	if Global.counterScene != 8:
+		Global.counterScene += 1
 		
 	Global.setState(Global.gameStates.START)

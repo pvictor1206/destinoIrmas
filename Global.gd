@@ -7,6 +7,8 @@ func sceneCreate(path,parent,name = 'newNode'):
 	newNode.name = name
 	parent.add_child(newNode)
 
+var counterScene = 0
+
 enum gameStates {NONE, START, TALK_NPC, NEXT_SCENE}
 
 var currentState = gameStates.START

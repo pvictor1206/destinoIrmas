@@ -665,19 +665,17 @@ offset_right = 168.0
 offset_bottom = 44.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 
-[node name="Chat" type="Button" parent="."]
+[node name="Chat00" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
 offset_left = 424.0
 offset_top = 525.0
 offset_right = 489.0
 offset_bottom = 624.0
 
-[node name="CliqueAqui" parent="." instance=ExtResource("9_58w8u")]
-position = Vector2(411, 492)
-
 [node name="ProximaCena" parent="." instance=ExtResource("9_58w8u")]
 position = Vector2(992, 508)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="Dialog/DialogBox/Timer" to="." method="_on_timer_timeout"]
-[connection signal="pressed" from="Chat" to="." method="_on_chat_pressed"]
+[connection signal="pressed" from="Chat00" to="." method="_on_chat_pressed"]
+[connection signal="pressed" from="Chat00" to="." method="_on_chat_00_pressed"]
