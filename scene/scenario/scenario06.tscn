@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ec6j41eih5ib"]
+[gd_scene load_steps=20 format=3 uid="uid://ec6j41eih5ib"]
 
 [ext_resource type="Script" path="res://scene/scenario/objects.gd" id="1_ukypr"]
 [ext_resource type="Texture2D" uid="uid://87mvr2cul5g1" path="res://assents/Seasonal Tilesets/Seasonal Tilesets/5 - Misc. universal tiles/Blocks (16 x 16).png" id="2_5qy8a"]
@@ -8,7 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://dx2uf85773kvt" path="res://assents/Seasonal Tilesets/Speech_Emotes (16 x 16).png" id="5_wlstw"]
 [ext_resource type="Texture2D" uid="uid://do5qagqa1ntac" path="res://assents/Seasonal Tilesets/Seasonal Tilesets/5 - Misc. universal tiles/Misc_props (16 x 16).png" id="6_re0dv"]
 [ext_resource type="PackedScene" uid="uid://hb0cmj08noqf" path="res://npcs/raquel.tscn" id="7_e6pce"]
+[ext_resource type="Texture2D" uid="uid://c6jf0mmlqfyy2" path="res://assents/dialog.png" id="8_fygv1"]
 [ext_resource type="PackedScene" uid="uid://b0hff6geuwc6s" path="res://npcs/morte.tscn" id="8_l5ldp"]
+[ext_resource type="PackedScene" uid="uid://c5eyut77f2tff" path="res://Text/text.tscn" id="10_a5c0d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bxdrm"]
 texture = ExtResource("2_5qy8a")
@@ -629,6 +631,42 @@ offset_top = 538.0
 offset_right = 1108.0
 offset_bottom = 565.0
 
+[node name="Dialog" type="Node2D" parent="."]
+visible = false
+
+[node name="DialogBox" type="NinePatchRect" parent="Dialog"]
+offset_left = 176.0
+offset_top = 94.0
+offset_right = 984.0
+offset_bottom = 308.0
+texture = ExtResource("8_fygv1")
+
+[node name="Text" type="RichTextLabel" parent="Dialog/DialogBox"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 47.0
+offset_right = 751.0
+offset_bottom = 188.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+theme_override_font_sizes/italics_font_size = 25
+theme_override_font_sizes/bold_italics_font_size = 25
+theme_override_font_sizes/mono_font_size = 20
+text = "
+"
+
+[node name="Timer" type="Timer" parent="Dialog/DialogBox"]
+wait_time = 0.01
+
+[node name="person" type="Label" parent="Dialog/DialogBox"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 20.0
+offset_right = 168.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
 [node name="NPC" type="Node2D" parent="."]
 
 [node name="Raquel" parent="NPC" instance=ExtResource("7_e6pce")]
@@ -637,4 +675,24 @@ position = Vector2(693, 514)
 [node name="Morte" parent="NPC" instance=ExtResource("8_l5ldp")]
 position = Vector2(608, 537)
 
+[node name="ProximaCena" parent="." instance=ExtResource("10_a5c0d")]
+position = Vector2(1014, 508)
+
+[node name="Chat0601" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 616.0
+offset_top = 480.0
+offset_right = 684.0
+offset_bottom = 630.0
+
+[node name="Chat0602" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 712.0
+offset_top = 482.0
+offset_right = 770.0
+offset_bottom = 626.0
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Dialog/DialogBox/Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Chat0601" to="." method="_on_chat_0601_pressed"]
+[connection signal="pressed" from="Chat0602" to="." method="_on_chat_0602_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dumnodgdtcr67"]
+[gd_scene load_steps=18 format=3 uid="uid://dumnodgdtcr67"]
 
 [ext_resource type="Script" path="res://scene/scenario/objects.gd" id="1_mes14"]
 [ext_resource type="Texture2D" uid="uid://87mvr2cul5g1" path="res://assents/Seasonal Tilesets/Seasonal Tilesets/5 - Misc. universal tiles/Blocks (16 x 16).png" id="2_m2ht5"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dx2uf85773kvt" path="res://assents/Seasonal Tilesets/Speech_Emotes (16 x 16).png" id="5_6q21d"]
 [ext_resource type="Texture2D" uid="uid://do5qagqa1ntac" path="res://assents/Seasonal Tilesets/Seasonal Tilesets/5 - Misc. universal tiles/Misc_props (16 x 16).png" id="6_6u8vo"]
 [ext_resource type="Texture2D" uid="uid://dkugs5jyvyw2o" path="res://assents/png-transparent-theater-drapes-and-stage-curtains-theatre-front-curtain-curtain-s-love-interior-design-decor-removebg-preview.png" id="7_l0dfh"]
+[ext_resource type="PackedScene" uid="uid://c5eyut77f2tff" path="res://Text/text.tscn" id="9_1wuge"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bxdrm"]
 texture = ExtResource("2_m2ht5")
@@ -625,3 +626,6 @@ layer_0/tile_data = PackedInt32Array(851968, 262144, 1, 851969, 262144, 1, 85197
 position = Vector2(577, 316.125)
 scale = Vector2(2.00693, 1.45901)
 texture = ExtResource("7_l0dfh")
+
+[node name="ProximaCena" parent="." instance=ExtResource("9_1wuge")]
+position = Vector2(1014, 508)

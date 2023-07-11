@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b4pblxpcllfor"]
+[gd_scene load_steps=20 format=3 uid="uid://b4pblxpcllfor"]
 
 [ext_resource type="Script" path="res://scene/scenario/objects.gd" id="1_xndj4"]
 [ext_resource type="Texture2D" uid="uid://b7t74gsiifmq3" path="res://assents/sceneImage/cenario06.jpg" id="2_af8mu"]
@@ -8,7 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://dx2uf85773kvt" path="res://assents/Seasonal Tilesets/Speech_Emotes (16 x 16).png" id="5_ho62s"]
 [ext_resource type="Texture2D" uid="uid://do5qagqa1ntac" path="res://assents/Seasonal Tilesets/Seasonal Tilesets/5 - Misc. universal tiles/Misc_props (16 x 16).png" id="6_lregk"]
 [ext_resource type="PackedScene" uid="uid://hb0cmj08noqf" path="res://npcs/raquel.tscn" id="7_kyhqe"]
+[ext_resource type="Texture2D" uid="uid://c6jf0mmlqfyy2" path="res://assents/dialog.png" id="8_5lv2h"]
 [ext_resource type="PackedScene" uid="uid://dxvwf5u54u7ln" path="res://npcs/ruth.tscn" id="8_x0qwp"]
+[ext_resource type="PackedScene" uid="uid://c5eyut77f2tff" path="res://Text/text.tscn" id="10_768v2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bxdrm"]
 texture = ExtResource("2_vlo4f")
@@ -635,7 +637,7 @@ texture_filter = 1
 scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_4pul1")
 format = 2
-layer_0/tile_data = PackedInt32Array(851968, 262144, 1, 851969, 262144, 1, 851970, 262144, 1, 851971, 262144, 1, 851972, 262144, 1, 851973, 262144, 1, 851974, 262144, 1, 851975, 262144, 1, 851976, 262144, 1, 851977, 262144, 1, 851978, 262144, 1, 851979, 262144, 1, 851980, 262144, 1, 851981, 262144, 1, 851982, 262144, 1, 851983, 262144, 1, 851984, 262144, 1, 851985, 262144, 1, 851986, 262144, 1, 851987, 262144, 1, 851988, 262144, 1, 851989, 262144, 1, 851990, 262144, 1, 851991, 262144, 1, 720920, 262144, 1, 786456, 262144, 1, 851992, 262144, 1, 655384, 262144, 1, 589848, 262144, 1, 524312, 262144, 1, 458776, 262144, 1, 393240, 262144, 1, 327704, 262144, 1, 262168, 262144, 1, 196632, 262144, 1, 131096, 262144, 1, 65560, 262144, 1, 24, 262144, 1, -65512, 262144, 1, 917503, 262144, 1, 851967, 262144, 1, 786431, 262144, 1, 720895, 262144, 1, 655359, 262144, 1, 589823, 262144, 1, 524287, 262144, 1, 458751, 262144, 1, 393215, 262144, 1, 327679, 262144, 1, 262143, 262144, 1, 196607, 262144, 1, 131071, 262144, 1, 65535, 262144, 1, -1, 262144, 1, -65536, 262144, 1, -65535, 262144, 1, -65534, 262144, 1, -65533, 262144, 1, -65532, 262144, 1, -65531, 262144, 1, -65530, 262144, 1, -65529, 262144, 1, -65528, 262144, 1, -65527, 262144, 1, -65526, 262144, 1, -65525, 262144, 1, -65524, 262144, 1, -65523, 262144, 1, -65522, 262144, 1, -65521, 262144, 1, -65520, 262144, 1, -65519, 262144, 1, -65518, 262144, 1, -65517, 262144, 1, -65516, 262144, 1, -65515, 262144, 1, -65514, 262144, 1, -65513, 262144, 1, 720917, 5, 0, 720918, 5, 0, 720897, 917505, 3, 786433, 917505, 4, 720898, 983041, 3, 720899, 1048577, 3, 786435, 1048577, 4, 720900, 1114113, 3, 720901, 1179649, 3, 786437, 1179649, 4, 655373, 196611, 0, 655371, 393219, 0)
+layer_0/tile_data = PackedInt32Array(851968, 262144, 1, 851969, 262144, 1, 851970, 262144, 1, 851971, 262144, 1, 851972, 262144, 1, 851973, 262144, 1, 851974, 262144, 1, 851975, 262144, 1, 851976, 262144, 1, 851977, 262144, 1, 851978, 262144, 1, 851979, 262144, 1, 851980, 262144, 1, 851981, 262144, 1, 851982, 262144, 1, 851983, 262144, 1, 851984, 262144, 1, 851985, 262144, 1, 851986, 262144, 1, 851987, 262144, 1, 851988, 262144, 1, 851989, 262144, 1, 851990, 262144, 1, 851991, 262144, 1, 720920, 262144, 1, 786456, 262144, 1, 851992, 262144, 1, 655384, 262144, 1, 589848, 262144, 1, 524312, 262144, 1, 458776, 262144, 1, 393240, 262144, 1, 327704, 262144, 1, 262168, 262144, 1, 196632, 262144, 1, 131096, 262144, 1, 65560, 262144, 1, 24, 262144, 1, -65512, 262144, 1, 917503, 262144, 1, 851967, 262144, 1, 786431, 262144, 1, 720895, 262144, 1, 655359, 262144, 1, 589823, 262144, 1, 524287, 262144, 1, 458751, 262144, 1, 393215, 262144, 1, 327679, 262144, 1, 262143, 262144, 1, 196607, 262144, 1, 131071, 262144, 1, 65535, 262144, 1, -1, 262144, 1, -65536, 262144, 1, -65535, 262144, 1, -65534, 262144, 1, -65533, 262144, 1, -65532, 262144, 1, -65531, 262144, 1, -65530, 262144, 1, -65529, 262144, 1, -65528, 262144, 1, -65527, 262144, 1, -65526, 262144, 1, -65525, 262144, 1, -65524, 262144, 1, -65523, 262144, 1, -65522, 262144, 1, -65521, 262144, 1, -65520, 262144, 1, -65519, 262144, 1, -65518, 262144, 1, -65517, 262144, 1, -65516, 262144, 1, -65515, 262144, 1, -65514, 262144, 1, -65513, 262144, 1, 720917, 5, 0, 720918, 5, 0, 720897, 917505, 3, 786433, 917505, 4, 720898, 983041, 3, 720899, 1048577, 3, 786435, 1048577, 4, 720900, 1114113, 3, 720901, 1179649, 3, 786437, 1179649, 4, 655373, 458755, 0, 655371, 524291, 0)
 
 [node name="Button" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -643,6 +645,42 @@ offset_left = 1003.0
 offset_top = 538.0
 offset_right = 1108.0
 offset_bottom = 565.0
+
+[node name="Dialog" type="Node2D" parent="."]
+visible = false
+
+[node name="DialogBox" type="NinePatchRect" parent="Dialog"]
+offset_left = 176.0
+offset_top = 94.0
+offset_right = 984.0
+offset_bottom = 308.0
+texture = ExtResource("8_5lv2h")
+
+[node name="Text" type="RichTextLabel" parent="Dialog/DialogBox"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 47.0
+offset_right = 751.0
+offset_bottom = 188.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+theme_override_font_sizes/italics_font_size = 25
+theme_override_font_sizes/bold_italics_font_size = 25
+theme_override_font_sizes/mono_font_size = 20
+text = "
+"
+
+[node name="Timer" type="Timer" parent="Dialog/DialogBox"]
+wait_time = 0.01
+
+[node name="person" type="Label" parent="Dialog/DialogBox"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 20.0
+offset_right = 168.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 
 [node name="NPC" type="Node2D" parent="."]
 
@@ -652,4 +690,24 @@ position = Vector2(515, 513)
 [node name="Ruth" parent="NPC" instance=ExtResource("8_x0qwp")]
 position = Vector2(620, 512)
 
+[node name="ProximaCena" parent="." instance=ExtResource("10_768v2")]
+position = Vector2(1014, 508)
+
+[node name="Chat0501" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 520.0
+offset_top = 480.0
+offset_right = 580.0
+offset_bottom = 623.0
+
+[node name="Chat0502" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 618.0
+offset_top = 481.0
+offset_right = 681.0
+offset_bottom = 621.0
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Dialog/DialogBox/Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Chat0501" to="." method="_on_chat_0501_pressed"]
+[connection signal="pressed" from="Chat0502" to="." method="_on_chat_0502_pressed"]

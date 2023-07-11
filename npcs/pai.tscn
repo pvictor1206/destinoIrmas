@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://dbcpp4qonu0wo"]
+
+[ext_resource type="Texture2D" uid="uid://c4rh8pxf7k3rd" path="res://assents/npcs/pixil-pai.png" id="1_k2j1b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0gsa"]
+atlas = ExtResource("1_k2j1b")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_os68a"]
+atlas = ExtResource("1_k2j1b")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3dbur"]
+atlas = ExtResource("1_k2j1b")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4nlt"]
+atlas = ExtResource("1_k2j1b")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u0jlm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0gsa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_os68a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3dbur")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s4nlt")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="Pai" type="Node2D"]
+
+[node name="PaiAnimation" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(52.5, 50.5)
+scale = Vector2(5.0625, 5.0625)
+sprite_frames = SubResource("SpriteFrames_u0jlm")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.893709
