@@ -137,7 +137,10 @@ var clicked07 = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$ProximaCena.addText("Próxima Cena")
+	if Global.counterScene == 8:
+		$ProximaCena.addText(" ")
+	else:
+		$ProximaCena.addText("Próxima Cena")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

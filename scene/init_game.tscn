@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1aa1y0ee451s"]
+
+[ext_resource type="Script" path="res://scene/init_game.gd" id="1_8rxip"]
+[ext_resource type="Texture2D" uid="uid://c5l4ag3hto6ce" path="res://assents/sceneImage/cenario02.jpg" id="1_ngcw4"]
+[ext_resource type="PackedScene" uid="uid://dxvwf5u54u7ln" path="res://npcs/ruth.tscn" id="2_djroe"]
+[ext_resource type="PackedScene" uid="uid://hb0cmj08noqf" path="res://npcs/raquel.tscn" id="3_hp64l"]
+
+[node name="InitGame" type="Node2D"]
+script = ExtResource("1_8rxip")
+
+[node name="Intro" type="Sprite2D" parent="."]
+position = Vector2(558, 304)
+scale = Vector2(1.26758, 1.26758)
+texture = ExtResource("1_ngcw4")
+
+[node name="Titulo" type="Label" parent="."]
+offset_left = -51.0
+offset_top = -3.0
+offset_right = 486.0
+offset_bottom = 379.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
+text = "O Destino 
+das 
+Irmãs"
+horizontal_alignment = 1
+
+[node name="NPC" type="Node2D" parent="."]
+
+[node name="Ruth" parent="NPC" instance=ExtResource("2_djroe")]
+position = Vector2(275, 262)
+scale = Vector2(3, 3)
+
+[node name="Raquel" parent="NPC" instance=ExtResource("3_hp64l")]
+position = Vector2(443, 267)
+scale = Vector2(3, 3)
+
+[node name="ButtonJogar" type="Button" parent="."]
+offset_left = 737.0
+offset_top = 108.0
+offset_right = 1114.0
+offset_bottom = 192.0
+theme_override_font_sizes/font_size = 50
+text = "Jogar"
+
+[node name="ButtonCreditos" type="Button" parent="."]
+offset_left = 734.0
+offset_top = 219.0
+offset_right = 1111.0
+offset_bottom = 303.0
+theme_override_font_sizes/font_size = 50
+text = "Créditos"
+
+[connection signal="pressed" from="ButtonJogar" to="." method="_on_button_jogar_pressed"]

@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://cnvipsc5k43yv"]
+
+[ext_resource type="Texture2D" uid="uid://vk6pn4o7im84" path="res://assents/npcs/raquelFinal.png" id="1_hcnsw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_itoc5"]
+atlas = ExtResource("1_hcnsw")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2gmc1"]
+atlas = ExtResource("1_hcnsw")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qw4kg"]
+atlas = ExtResource("1_hcnsw")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wcrx8"]
+atlas = ExtResource("1_hcnsw")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ymei"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_itoc5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2gmc1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qw4kg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wcrx8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="RaquelFinal" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(19.5, 39)
+scale = Vector2(3.4375, 3.4375)
+sprite_frames = SubResource("SpriteFrames_5ymei")
+autoplay = "default"
+frame_progress = 0.834417
