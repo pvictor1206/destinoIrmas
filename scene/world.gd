@@ -6,10 +6,10 @@ extends Node2D
 
 @onready var sceneNode = $scene
 
+@onready var player = Global.sceneCreate(characterClass, characterNode, 'currentPlayer')
 
 
 # COMMON VARIABLES
-var player
 var floor
 var scene
 
@@ -17,13 +17,14 @@ var scene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	player = Global.sceneCreate(characterClass, characterNode, 'currentPlayer')
+	pass
 
 func _physics_process(delta):
 	if Global.currentState == Global.gameStates.START:
 		start(Global.counterScene)
 	elif Global.currentState == Global.gameStates.NEXT_SCENE:
 		newScene()
+		$character/currentPlayer/player.position = Vector2(0, 49.35)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -43,6 +44,7 @@ func start(numberScenario):
 
 	scene = Global.sceneCreate(sceneClass, sceneNode, 'currentScene')
 	Global.setState(Global.gameStates.TALK_NPC)
+	#player.position = Vector2(79.25, 535.25)
 
 func newScene():
 	if Global.counterScene != 8:

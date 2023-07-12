@@ -2,25 +2,24 @@ extends Node2D
 
 # CENA 00
 var msq_queue00: Array = [
-	"Olá, Está preparado para embarcar em uma jornada cheia de emoção, mistério e reviravoltas? Então, coloque-se no papel teatral, pois você é o jogador desta história fascinante que está prestes a se desdobrar.",
+	"Olá! Está preparado para embarcar em uma jornada cheia de emoção, mistério e reviravoltas? Então, coloque-se no papel teatral, pois você é o jogador desta história fascinante que está prestes a se desdobrar.",
 	"Estamos prestes a mergulhar em um mundo onde as linhas entre realidade e ficção se entrelaçam, onde os destinos se cruzam e onde as escolhas moldam o curso dos acontecimentos.",
-	"Há muitos anos atrás, no aconchego de um quarto de hospital, uma cena de pura emoção estava prestes a se desenrolar. Ana, uma mulher corajosa e determinada, deitava em uma cama, enquanto seu marido, Paulo, segurava sua mão com carinho e ansiedade.",
-	"O choro de um recém-nascido encheu o quarto de hospital. Ruth tinha chegado ao mundo, trazendo consigo alegria e amor para seus pais. Logo em seguida, nasce Raquel.",
+	"Há muitos anos, no aconchego de um quarto de hospital, uma cena de pura emoção estava prestes a se desenrolar. Ana, uma mulher corajosa e determinada, deitava em uma cama, enquanto seu marido, Paulo, segurava sua mão com carinho e ansiedade.",
+	"O choro de um recém-nascido encheu o quarto de hospital. Ruth tinha chegado ao mundo, trazendo consigo alegria e amor para seus pais. Logo em seguida, nasceu Raquel.",
 	"Durante o parto, Ana, com sua coragem e determinação, enfrentou complicações inesperadas. A alegria do momento foi ofuscada pela dor da despedida, enquanto Ana deixava este mundo, entregando o precioso legado de suas filhas.",
-	"'Interessante a história dessas duas irmãs, vamos assistir o densenrolar da história?'",
-	"'Lembre-se, somos o jogador, ninguém poderá enxergar você, só o mais obscuro olhar da noite.'",
+	"'Interessante a história dessas duas irmãs, vamos assistir o desenrolar da história?'",
+	"'Lembre-se, somos o jogador, ninguém poderá enxergar você, apenas o mais obscuro olhar da noite.'"
 ]
 
 #CENA 01
 var msq_queue0101: Array = [
 	"Ruth, você é incrível! Veja como você domina o papel da heroína com tanta confiança e energia!",
 	"Vamos criar uma peça? Posso ser a diretora!"
-	
 ]
 
 var msq_queue0102: Array = [
 	"Claro, Raquel! Você é a melhor diretora que eu conheço. Vamos fazer uma peça incrível juntas!",
-	"Com você ao meu lado, tenho certeza de que nossa peça será um sucesso. Vamos nos divertir muito!",
+	"Com você ao meu lado, tenho certeza de que nossa peça será um sucesso. Vamos nos divertir muito!"
 ]
 
 # CENA 02
@@ -31,80 +30,79 @@ var msq_queue0201: Array = [
 ]
 
 var msq_queue0202: Array = [
-	"Obrigada por acreditarem em mim. Vocês me inspiram a seguir em frente e a buscar meus sonhos.",
+	"Obrigada por acreditarem em mim. Vocês me inspiram a seguir em frente e a buscar meus sonhos."
 ]
 
 var msq_queue0203: Array = [
-	"Parabéns Ruth...",
-	"'O que está acontecendo? Eu estou feliz pela Ruth, mas de certa forma, queria está no lugar dela'",
-	'...'
+	"Parabéns, Ruth...",
+	"'O que está acontecendo? Estou feliz pela Ruth, mas de certa forma, queria estar no lugar dela.'",
+	"..."
 ]
 
 # CENA 03
 
 var msq_queue0301: Array = [
-	"Mesmo de uns tempos para cá não se importe tanto com o teatro quanto eu, queria desabafar contigo.",
-	"Hoje a noite é a grande apresentação, estou muito nervoso, e se o público não gostar de mim? O que farei?",
-	"Na apresentação, vou reviver lembranças da nossa infância, quando bricarvamos de criar peças.",
+	"Mesmo que de uns tempos para cá você não se importe tanto com o teatro quanto eu, eu queria desabafar contigo.",
+	"Hoje à noite é a grande apresentação, estou muito nervosa. E se o público não gostar de mim? O que farei?",
+	"Na apresentação, vou reviver lembranças da nossa infância, quando brincávamos de criar peças.",
 	"Nunca te contei, mas esses momentos me acalmam..."
 ]
 
 var msq_queue0302: Array = [
 	"Tenho certeza de que você vai fazer algum sucesso hoje à noite. Não que eu me importe com isso.",
-	"Obrigada por lembrar da infância. Pelo menos tinhamos o mesmo destaque...",
-	"'Como ela ousar falar que não me importo com teatro. Se eu podesse, ficaria no lugar dela.'",
-	"'Nunca pedi para ter uma irmã, ainda mais... Com sucesso. Quero o mundo se exploda.'"
+	"Obrigada por lembrar da infância. Pelo menos tínhamos o mesmo destaque...",
+	"'Como ela ousa falar que não me importo com teatro? Se eu pudesse, ficaria no lugar dela.'",
+	"'Nunca pedi para ter uma irmã, ainda mais... Com sucesso. Quero que o mundo se exploda.'"
 ]
 
 #CENA 04
 var msq_queue0401: Array = [
-	"Ela não é tão talentosa assim... Ruth o nome dela, certo?",
+	"Ela não é tão talentosa assim... Ruth, esse é o nome dela, certo?",
 	"Uma pena. Uma moça tão formosa, na plateia...",
-	"Ruth está ofuscando o seu brilho. Ela precisa desaparecer para que você possa ser a estrela que sempre quis",
+	"Ruth está ofuscando o seu brilho. Ela precisa desaparecer para que você possa ser a estrela que sempre quis."
 ]
 
 var msq_queue0402: Array = [
-	"Porque ela? Todos olham para ela, enquanto a mim? Eu existo",
-	"Só existe a Ruth para todos, meus pais, amigos, família...",
-	"É como se... Nunca tivesse existido."
+	"Por que ela? Todos olham para ela, enquanto a mim? Eu existo.",
+	"Só existe a Ruth para todos, meu pai, amigos, família...",
+	"É como se... Eu nunca tivesse existido."
 ]
 
 #CENA 05
 var msq_queue0501: Array = [
-	"GRANDE APRESENTAÇÃO, Hen.",
-	"O QUE VOCÊ QUER? UM PRÊMIO?, SABE QUANTO TEMPO FIQUEI NA SUAS SOMBRAS?",
-	"AGORA NÃO VENHA COM 'NÃO SABIA'",
-	"EU CANSEI RUTH, EU VOU BRILHAR AGORA, NEM QUE MOVA O MUNDO"
-	
+	"Grande apresentação, Hen.",
+	"O que você quer? Um prêmio? Sabe quanto tempo fiquei nas suas sombras?",
+	"Agora não venha com 'não sabia'.",
+	"Eu cansei, Ruth. Eu vou brilhar agora, nem que mova o mundo."
 ]
 
 var msq_queue0502: Array = [
 	"Irmã, eu não sabia...",
-	"Ultimamente te vejo mais afastada, tive medo de me aproximar, acho que foi um erro",
-	"Estamos juntas, não faça isso irmã, você não sabe o quanto te amo."
+	"Ultimamente te vejo mais afastada. Tive medo de me aproximar. Acho que foi um erro.",
+	"Estamos juntas. Não faça isso, irmã. Você não sabe o quanto te amo."
 ]
 
 #CENA 06
 var msq_queue0601: Array = [
-	"Parece que está um pouco raivosa, não parece, mas te entendo",
-	"Uns me chamam de fim, outros de epílogo, mas pode me chamar de Morte",
+	"Parece que está um pouco raivosa, certo? Te entendo.",
+	"Uns me chamam de fim, outros de epílogo, mas pode me chamar de Morte.",
 	"Estou disposto a fazer um acordo com você, Raquel. Seu ressentimento pode ser satisfeito.",
-	"Mate a que brilhará nos palcos e o seu talento será reconhecido",
+	"Mate a irmã que brilhará nos palcos e o seu talento será reconhecido."
 ]
 
 var msq_queue0602: Array = [
-	"Voc.. Você... É a morte?",
-	"Eu aceito o acordo. Quero um brilho que me pertece, que foi roubado.",
-	"Nem que seja matar a pessoa que um dia amei,"
+	"Voc... Você... É a morte?",
+	"Eu aceito o acordo. Quero o brilho que me pertence, que foi roubado.",
+	"Nem que seja matar a pessoa que um dia amei."
 ]
 
 #CENA 07
 
 var msq_queue07: Array = [
-	"'Finalmente'",
-	"'Depois te tanto esforço, anos com ensaios, consegui ser a atriz principal da maior peça de París'",
-	"'Nem acredito que irá ser amanhã, a grande noite'",
-	"'Estou sozinha, mas, tenho um sucesso que a Ruth nunca imaginaria ter.'"
+	"Finalmente.",
+	"Depois de tanto esforço, anos com ensaios, consegui ser a atriz principal da maior peça de Paris.",
+	"Nem acredito que será amanhã, a grande noite.",
+	"Estou sozinha, mas tenho um sucesso que a Ruth nunca imaginaria ter."
 ]
 
 var clicked00 = true
@@ -168,14 +166,14 @@ func show_message() -> void:
 			await get_tree().create_timer(0.5).timeout
 			clicked00 = true
 			msq_queue00 = [
-				"Olá, Está preparado para embarcar em uma jornada cheia de emoção, mistério e reviravoltas? Então, coloque-se no papel teatral, pois você é o jogador desta história fascinante que está prestes a se desdobrar.",
-				"Estamos prestes a mergulhar em um mundo onde as linhas entre realidade e ficção se entrelaçam, onde os destinos se cruzam e onde as escolhas moldam o curso dos acontecimentos.",
-				"Há muitos anos atrás, no aconchego de um quarto de hospital, uma cena de pura emoção estava prestes a se desenrolar. Ana, uma mulher corajosa e determinada, deitava em uma cama, enquanto seu marido, Paulo, segurava sua mão com carinho e ansiedade.",
-				"O choro de um recém-nascido encheu o quarto de hospital. Ruth tinha chegado ao mundo, trazendo consigo alegria e amor para seus pais. Logo em seguida, nasce Raquel.",
-				"Durante o parto, Ana, com sua coragem e determinação, enfrentou complicações inesperadas. A alegria do momento foi ofuscada pela dor da despedida, enquanto Ana deixava este mundo, entregando o precioso legado de suas filhas.",
-				"'Interessante a história dessas duas irmãs, vamos assistir o densenrolar da história?'",
-				"'Lembre-se, somos o jogador, ninguém poderá enxergar você, só o mais obscuro olhar da noite.'",
-			]
+					"Olá! Está preparado para embarcar em uma jornada cheia de emoção, mistério e reviravoltas? Então, coloque-se no papel teatral, pois você é o jogador desta história fascinante que está prestes a se desdobrar.",
+					"Estamos prestes a mergulhar em um mundo onde as linhas entre realidade e ficção se entrelaçam, onde os destinos se cruzam e onde as escolhas moldam o curso dos acontecimentos.",
+					"Há muitos anos, no aconchego de um quarto de hospital, uma cena de pura emoção estava prestes a se desenrolar. Ana, uma mulher corajosa e determinada, deitava em uma cama, enquanto seu marido, Paulo, segurava sua mão com carinho e ansiedade.",
+					"O choro de um recém-nascido encheu o quarto de hospital. Ruth tinha chegado ao mundo, trazendo consigo alegria e amor para seus pais. Logo em seguida, nasceu Raquel.",
+					"Durante o parto, Ana, com sua coragem e determinação, enfrentou complicações inesperadas. A alegria do momento foi ofuscada pela dor da despedida, enquanto Ana deixava este mundo, entregando o precioso legado de suas filhas.",
+					"'Interessante a história dessas duas irmãs, vamos assistir o desenrolar da história?'",
+					"'Lembre-se, somos o jogador, ninguém poderá enxergar você, apenas o mais obscuro olhar da noite.'"
+				]
 			return
 		else:
 			text.visible_characters = 0
@@ -192,7 +190,6 @@ func show_message() -> void:
 			msq_queue0101 = [
 				"Ruth, você é incrível! Veja como você domina o papel da heroína com tanta confiança e energia!",
 				"Vamos criar uma peça? Posso ser a diretora!"
-				
 			]
 
 			return
@@ -209,7 +206,7 @@ func show_message() -> void:
 			clicked0102 = true
 			msq_queue0102 = [
 				"Claro, Raquel! Você é a melhor diretora que eu conheço. Vamos fazer uma peça incrível juntas!",
-				"Com você ao meu lado, tenho certeza de que nossa peça será um sucesso. Vamos nos divertir muito!",
+				"Com você ao meu lado, tenho certeza de que nossa peça será um sucesso. Vamos nos divertir muito!"
 			]
 
 			return
@@ -244,7 +241,7 @@ func show_message() -> void:
 			await get_tree().create_timer(0.5).timeout
 			clicked0202 = true
 			msq_queue0202 = [
-				"Obrigada por acreditarem em mim. Vocês me inspiram a seguir em frente e a buscar meus sonhos.",
+				"Obrigada por acreditarem em mim. Vocês me inspiram a seguir em frente e a buscar meus sonhos."
 			]
 
 			return
@@ -260,9 +257,9 @@ func show_message() -> void:
 			await get_tree().create_timer(0.5).timeout
 			clicked0203 = true
 			msq_queue0203 = [
-				"Parabéns Ruth...",
-				"'O que está acontecendo? Eu estou feliz pela Ruth, mas de certa forma, queria está no lugar dela'",
-				'...'
+				"Parabéns, Ruth...",
+				"'O que está acontecendo? Estou feliz pela Ruth, mas de certa forma, queria estar no lugar dela.'",
+				"..."
 			]
 
 			return
@@ -279,9 +276,9 @@ func show_message() -> void:
 			await get_tree().create_timer(0.5).timeout
 			clicked0301 = true
 			msq_queue0301 = [
-				"Mesmo de uns tempos para cá não se importe tanto com o teatro quanto eu, queria desabafar contigo.",
-				"Hoje a noite é a grande apresentação, estou muito nervoso, e se o público não gostar de mim? O que farei?",
-				"Na apresentação, vou reviver lembranças da nossa infância, quando bricarvamos de criar peças.",
+				"Mesmo que de uns tempos para cá você não se importe tanto com o teatro quanto eu, eu queria desabafar contigo.",
+				"Hoje à noite é a grande apresentação, estou muito nervosa. E se o público não gostar de mim? O que farei?",
+				"Na apresentação, vou reviver lembranças da nossa infância, quando brincávamos de criar peças.",
 				"Nunca te contei, mas esses momentos me acalmam..."
 			]
 
@@ -299,9 +296,9 @@ func show_message() -> void:
 			clicked0302 = true
 			msq_queue0302 = [
 				"Tenho certeza de que você vai fazer algum sucesso hoje à noite. Não que eu me importe com isso.",
-				"Obrigada por lembrar da infância. Pelo menos tinhamos o mesmo destaque...",
-				"'Como ela ousar falar que não me importo com teatro. Se eu podesse, ficaria no lugar dela.'",
-				"'Nunca pedi para ter uma irmã, ainda mais... Com sucesso. Quero o mundo se exploda.'"
+				"Obrigada por lembrar da infância. Pelo menos tínhamos o mesmo destaque...",
+				"'Como ela ousa falar que não me importo com teatro? Se eu pudesse, ficaria no lugar dela.'",
+				"'Nunca pedi para ter uma irmã, ainda mais... Com sucesso. Quero que o mundo se exploda.'"
 			]
 
 			return
@@ -319,9 +316,9 @@ func show_message() -> void:
 			await get_tree().create_timer(0.5).timeout
 			clicked0401 = true
 			msq_queue0401 = [
-				"Ela não é tão talentosa assim... Ruth o nome dela, certo?",
+				"Ela não é tão talentosa assim... Ruth, esse é o nome dela, certo?",
 				"Uma pena. Uma moça tão formosa, na plateia...",
-				"Ruth está ofuscando o seu brilho. Ela precisa desaparecer para que você possa ser a estrela que sempre quis",
+				"Ruth está ofuscando o seu brilho. Ela precisa desaparecer para que você possa ser a estrela que sempre quis."
 			]
 
 			return
@@ -337,9 +334,9 @@ func show_message() -> void:
 			await get_tree().create_timer(0.5).timeout
 			clicked0402 = true
 			msq_queue0402 = [
-				"Porque ela? Todos olham para ela, enquanto a mim? Eu existo",
-				"Só existe a Ruth para todos, meus pais, amigos, família...",
-				"É como se... Nunca tivesse existido."
+				"Por que ela? Todos olham para ela, enquanto a mim? Eu existo.",
+				"Só existe a Ruth para todos, meu pai, amigos, família...",
+				"É como se... Eu nunca tivesse existido."
 			]
 
 			return
@@ -356,11 +353,10 @@ func show_message() -> void:
 			await get_tree().create_timer(0.5).timeout
 			clicked0501 = true
 			msq_queue0501 = [
-				"GRANDE APRESENTAÇÃO, Hen.",
-				"O QUE VOCÊ QUER? UM PRÊMIO?, SABE QUANTO TEMPO FIQUEI NA SUAS SOMBRAS?",
-				"AGORA NÃO VENHA COM 'NÃO SABIA'",
-				"EU CANSEI RUTH, EU VOU BRILHAR AGORA, NEM QUE MOVA O MUNDO"
-				
+				"Grande apresentação, Hen.",
+				"O que você quer? Um prêmio? Sabe quanto tempo fiquei nas suas sombras?",
+				"Agora não venha com 'não sabia'.",
+				"Eu cansei, Ruth. Eu vou brilhar agora, nem que mova o mundo."
 			]
 
 			return
@@ -377,8 +373,8 @@ func show_message() -> void:
 			clicked0502 = true
 			msq_queue0502 = [
 				"Irmã, eu não sabia...",
-				"Ultimamente te vejo mais afastada, tive medo de me aproximar, acho que foi um erro",
-				"Estamos juntas, não faça isso irmã, você não sabe o quanto te amo."
+				"Ultimamente te vejo mais afastada. Tive medo de me aproximar. Acho que foi um erro.",
+				"Estamos juntas. Não faça isso, irmã. Você não sabe o quanto te amo."
 			]
 
 			return
@@ -395,10 +391,10 @@ func show_message() -> void:
 			await get_tree().create_timer(0.5).timeout
 			clicked0601 = true
 			msq_queue0601 = [
-				"Parece que está um pouco raivosa, não parece, mas te entendo",
-				"Uns me chamam de fim, outros de epílogo, mas pode me chamar de Morte",
+				"Parece que está um pouco raivosa, certo? Te entendo.",
+				"Uns me chamam de fim, outros de epílogo, mas pode me chamar de Morte.",
 				"Estou disposto a fazer um acordo com você, Raquel. Seu ressentimento pode ser satisfeito.",
-				"Mate a que brilhará nos palcos e o seu talento será reconhecido",
+				"Mate a irmã que brilhará nos palcos e o seu talento será reconhecido."
 			]
 
 			return
@@ -414,9 +410,9 @@ func show_message() -> void:
 			await get_tree().create_timer(0.5).timeout
 			clicked0602 = true
 			msq_queue0602 = [
-				"Voc.. Você... É a morte?",
-				"Eu aceito o acordo. Quero um brilho que me pertece, que foi roubado.",
-				"Nem que seja matar a pessoa que um dia amei,"
+				"Voc... Você... É a morte?",
+				"Eu aceito o acordo. Quero o brilho que me pertence, que foi roubado.",
+				"Nem que seja matar a pessoa que um dia amei."
 			]
 
 			return
@@ -433,9 +429,10 @@ func show_message() -> void:
 			await get_tree().create_timer(0.5).timeout
 			clicked07 = true
 			msq_queue07 = [
-				"Voc.. Você... É a morte?",
-				"Eu aceito o acordo. Quero um brilho que me pertece, que foi roubado.",
-				"Nem que seja matar a pessoa que um dia amei,"
+				"Finalmente.",
+				"Depois de tanto esforço, anos com ensaios, consegui ser a atriz principal da maior peça de Paris.",
+				"Nem acredito que será amanhã, a grande noite.",
+				"Estou sozinha, mas tenho um sucesso que a Ruth nunca imaginaria ter."
 			]
 
 			return
