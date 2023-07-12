@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://dgtv2kggrtk0q"]
+[gd_scene load_steps=21 format=3 uid="uid://dgtv2kggrtk0q"]
 
 [ext_resource type="Script" path="res://character/player.gd" id="1_3gtsm"]
 [ext_resource type="Texture2D" uid="uid://cbmjqig2af47e" path="res://assents/player/pixil-frame-0(2).png" id="2_737aa"]
 [ext_resource type="Texture2D" uid="uid://cff1xil673g61" path="res://assents/player/pixil-frame-0(1).png" id="3_7xrgw"]
+[ext_resource type="Texture2D" uid="uid://c063663mnvm0y" path="res://assents/npcs/morte-0.png" id="3_j88va"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tbqso"]
 radius = 35.6265
@@ -21,6 +22,22 @@ region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u1han"]
 atlas = ExtResource("2_737aa")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_esas1"]
+atlas = ExtResource("3_j88va")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnx2x"]
+atlas = ExtResource("3_j88va")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3vse"]
+atlas = ExtResource("3_j88va")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2uvqm"]
+atlas = ExtResource("3_j88va")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p6kih"]
@@ -68,6 +85,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_esas1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qnx2x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3vse")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2uvqm")
+}],
+"loop": true,
+"name": &"morte_state",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_p6kih")
 }, {
 "duration": 1.0,
@@ -104,5 +138,5 @@ texture_filter = 1
 position = Vector2(79, 535)
 scale = Vector2(5.15625, 5.15625)
 sprite_frames = SubResource("SpriteFrames_va8po")
-animation = &"idle"
+animation = &"morte_state"
 autoplay = "idle"
