@@ -19,7 +19,15 @@ func _physics_process(delta):
 	var direction = Input.get_axis("ui_left", "ui_right")
 	
 	if Global.counterScene == 8:
-		animation.play("morte_state")
+		if direction:
+			velocity.x = direction * SPEED
+			animation.play("morte_run")
+			#altera a direção
+			animation.scale.x = direction * 5.156
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
+			animation.play("morte_state")
+		
 	else:
 		if direction:
 			velocity.x = direction * SPEED
