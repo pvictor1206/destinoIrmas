@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dktgddlagl8t5"]
+[gd_scene load_steps=24 format=3 uid="uid://dktgddlagl8t5"]
 
 [ext_resource type="Script" path="res://scene/scenario/objects.gd" id="1_1ot7t"]
 [ext_resource type="Texture2D" uid="uid://87mvr2cul5g1" path="res://assents/Seasonal Tilesets/Seasonal Tilesets/5 - Misc. universal tiles/Blocks (16 x 16).png" id="2_6qq5h"]
@@ -9,8 +9,12 @@
 [ext_resource type="Texture2D" uid="uid://do5qagqa1ntac" path="res://assents/Seasonal Tilesets/Seasonal Tilesets/5 - Misc. universal tiles/Misc_props (16 x 16).png" id="6_28c58"]
 [ext_resource type="PackedScene" uid="uid://hb0cmj08noqf" path="res://npcs/raquel.tscn" id="7_v3jra"]
 [ext_resource type="PackedScene" uid="uid://dxvwf5u54u7ln" path="res://npcs/ruth.tscn" id="8_480sv"]
+[ext_resource type="FontFile" uid="uid://diolq3k4p4ak1" path="res://fonts/VT323-Regular.ttf" id="9_k6kl6"]
 [ext_resource type="PackedScene" uid="uid://c5eyut77f2tff" path="res://Text/text.tscn" id="10_gbec4"]
 [ext_resource type="Texture2D" uid="uid://c6jf0mmlqfyy2" path="res://assents/dialog.png" id="11_8yjje"]
+[ext_resource type="Texture2D" uid="uid://cxy86m2t4be2e" path="res://assents/_3f7eacfe-2078-4380-9aba-4565925b3770-removebg-preview.png" id="13_wtfp8"]
+[ext_resource type="Texture2D" uid="uid://ci1we65dibhqe" path="res://assents/_75432f41-2855-4518-9be3-e6b2036aca67-removebg-preview.png" id="14_xjux6"]
+[ext_resource type="AudioStream" uid="uid://ddtrfgyly6ovs" path="res://assents/music/music03.mp3" id="15_0n3bt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bxdrm"]
 texture = ExtResource("2_6qq5h")
@@ -648,7 +652,8 @@ offset_top = 47.0
 offset_right = 751.0
 offset_bottom = 188.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 25
+theme_override_fonts/normal_font = ExtResource("9_k6kl6")
+theme_override_font_sizes/normal_font_size = 30
 theme_override_font_sizes/bold_font_size = 25
 theme_override_font_sizes/italics_font_size = 25
 theme_override_font_sizes/bold_italics_font_size = 25
@@ -666,6 +671,8 @@ offset_top = 20.0
 offset_right = 168.0
 offset_bottom = 44.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_k6kl6")
+theme_override_font_sizes/font_size = 30
 
 [node name="NPC" type="Node2D" parent="."]
 
@@ -691,6 +698,31 @@ offset_left = 621.0
 offset_top = 478.0
 offset_right = 685.0
 offset_bottom = 626.0
+
+[node name="Flores01" type="Sprite2D" parent="."]
+position = Vector2(171, 598)
+scale = Vector2(0.15275, 0.15275)
+texture = ExtResource("13_wtfp8")
+
+[node name="Flores02" type="Sprite2D" parent="."]
+position = Vector2(218, 599)
+scale = Vector2(0.14775, 0.14775)
+texture = ExtResource("13_wtfp8")
+
+[node name="Flores03" type="Sprite2D" parent="."]
+position = Vector2(884, 595)
+scale = Vector2(0.198, 0.198)
+texture = ExtResource("14_xjux6")
+
+[node name="Flores04" type="Sprite2D" parent="."]
+position = Vector2(827, 594)
+scale = Vector2(0.198, 0.198)
+texture = ExtResource("14_xjux6")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_0n3bt")
+volume_db = -6.764
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="Dialog/DialogBox/Timer" to="." method="_on_timer_timeout"]

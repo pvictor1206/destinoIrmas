@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://mexui1ee2xbt"]
+[gd_scene load_steps=22 format=3 uid="uid://mexui1ee2xbt"]
 
 [ext_resource type="Script" path="res://scene/scenario/objects.gd" id="1_l2vsq"]
 [ext_resource type="Texture2D" uid="uid://cb43jerdr08x1" path="res://assents/sceneImage/cenario01.jpg" id="2_yl7fl"]
@@ -9,6 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://do5qagqa1ntac" path="res://assents/Seasonal Tilesets/Seasonal Tilesets/5 - Misc. universal tiles/Misc_props (16 x 16).png" id="7_j5frv"]
 [ext_resource type="Texture2D" uid="uid://c6jf0mmlqfyy2" path="res://assents/dialog.png" id="8_17hi5"]
 [ext_resource type="PackedScene" uid="uid://c5eyut77f2tff" path="res://Text/text.tscn" id="9_58w8u"]
+[ext_resource type="FontFile" uid="uid://diolq3k4p4ak1" path="res://fonts/VT323-Regular.ttf" id="9_h0f07"]
+[ext_resource type="Texture2D" uid="uid://csoqy57o4pwf1" path="res://assents/_9cfb3b32-ce56-45fd-8970-7d5bfbc36f36-removebg-preview.png" id="11_w776g"]
+[ext_resource type="Texture2D" uid="uid://bpyb05emdpfdg" path="res://assents/_d48cff49-6b56-45da-b647-5f4db23889f3-removebg-preview.png" id="12_nwqr0"]
+[ext_resource type="AudioStream" uid="uid://cuw0t06k2ybqy" path="res://assents/music/music02.mp3" id="13_nr2ty"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bxdrm"]
 texture = ExtResource("3_77okf")
@@ -620,7 +624,7 @@ texture_filter = 1
 scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_4pul1")
 format = 2
-layer_0/tile_data = PackedInt32Array(851968, 262144, 1, 851969, 262144, 1, 851970, 262144, 1, 851971, 262144, 1, 851972, 262144, 1, 851973, 262144, 1, 851974, 262144, 1, 851975, 262144, 1, 851976, 262144, 1, 851977, 262144, 1, 851978, 262144, 1, 851979, 262144, 1, 851980, 262144, 1, 851981, 262144, 1, 851982, 262144, 1, 851983, 262144, 1, 851984, 262144, 1, 851985, 262144, 1, 851986, 262144, 1, 851987, 262144, 1, 851988, 262144, 1, 851989, 262144, 1, 851990, 262144, 1, 851991, 262144, 1, 720920, 262144, 1, 786456, 262144, 1, 851992, 262144, 1, 655384, 262144, 1, 589848, 262144, 1, 524312, 262144, 1, 458776, 262144, 1, 393240, 262144, 1, 327704, 262144, 1, 262168, 262144, 1, 196632, 262144, 1, 131096, 262144, 1, 65560, 262144, 1, 24, 262144, 1, -65512, 262144, 1, 917503, 262144, 1, 851967, 262144, 1, 786431, 262144, 1, 720895, 262144, 1, 655359, 262144, 1, 589823, 262144, 1, 524287, 262144, 1, 458751, 262144, 1, 393215, 262144, 1, 327679, 262144, 1, 262143, 262144, 1, 196607, 262144, 1, 131071, 262144, 1, 65535, 262144, 1, -1, 262144, 1, -65536, 262144, 1, -65535, 262144, 1, -65534, 262144, 1, -65533, 262144, 1, -65532, 262144, 1, -65531, 262144, 1, -65530, 262144, 1, -65529, 262144, 1, -65528, 262144, 1, -65527, 262144, 1, -65526, 262144, 1, -65525, 262144, 1, -65524, 262144, 1, -65523, 262144, 1, -65522, 262144, 1, -65521, 262144, 1, -65520, 262144, 1, -65519, 262144, 1, -65518, 262144, 1, -65517, 262144, 1, -65516, 262144, 1, -65515, 262144, 1, -65514, 262144, 1, -65513, 262144, 1, 655364, 65537, 1, 720900, 65537, 2, 786436, 65537, 3, 655365, 131073, 1, 720901, 131073, 2, 786437, 131073, 3, 655366, 196609, 1, 720902, 196609, 2, 786438, 196609, 3, 655371, 327681, 1, 720907, 327681, 2, 786443, 327681, 3, 655372, 393217, 1, 720908, 393217, 2, 786444, 393217, 3, 655373, 458753, 1, 720909, 458753, 2, 786445, 458753, 3, 786441, 196610, 5, 720905, 3, 0, 720917, 5, 0, 720918, 5, 0)
+layer_0/tile_data = PackedInt32Array(851968, 262144, 1, 851969, 262144, 1, 851970, 262144, 1, 851971, 262144, 1, 851972, 262144, 1, 851973, 262144, 1, 851974, 262144, 1, 851975, 262144, 1, 851976, 262144, 1, 851977, 262144, 1, 851978, 262144, 1, 851979, 262144, 1, 851980, 262144, 1, 851981, 262144, 1, 851982, 262144, 1, 851983, 262144, 1, 851984, 262144, 1, 851985, 262144, 1, 851986, 262144, 1, 851987, 262144, 1, 851988, 262144, 1, 851989, 262144, 1, 851990, 262144, 1, 851991, 262144, 1, 720920, 262144, 1, 786456, 262144, 1, 851992, 262144, 1, 655384, 262144, 1, 589848, 262144, 1, 524312, 262144, 1, 458776, 262144, 1, 393240, 262144, 1, 327704, 262144, 1, 262168, 262144, 1, 196632, 262144, 1, 131096, 262144, 1, 65560, 262144, 1, 24, 262144, 1, -65512, 262144, 1, 917503, 262144, 1, 851967, 262144, 1, 786431, 262144, 1, 720895, 262144, 1, 655359, 262144, 1, 589823, 262144, 1, 524287, 262144, 1, 458751, 262144, 1, 393215, 262144, 1, 327679, 262144, 1, 262143, 262144, 1, 196607, 262144, 1, 131071, 262144, 1, 65535, 262144, 1, -1, 262144, 1, -65536, 262144, 1, -65535, 262144, 1, -65534, 262144, 1, -65533, 262144, 1, -65532, 262144, 1, -65531, 262144, 1, -65530, 262144, 1, -65529, 262144, 1, -65528, 262144, 1, -65527, 262144, 1, -65526, 262144, 1, -65525, 262144, 1, -65524, 262144, 1, -65523, 262144, 1, -65522, 262144, 1, -65521, 262144, 1, -65520, 262144, 1, -65519, 262144, 1, -65518, 262144, 1, -65517, 262144, 1, -65516, 262144, 1, -65515, 262144, 1, -65514, 262144, 1, -65513, 262144, 1, 786441, 196610, 5, 720905, 3, 0, 720917, 5, 0, 720918, 5, 0)
 
 [node name="Button" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -641,12 +645,13 @@ texture = ExtResource("8_17hi5")
 
 [node name="Text" type="RichTextLabel" parent="Dialog/DialogBox"]
 layout_mode = 0
-offset_left = 51.0
-offset_top = 47.0
-offset_right = 751.0
-offset_bottom = 188.0
+offset_left = 90.0
+offset_top = 54.0
+offset_right = 790.0
+offset_bottom = 195.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 25
+theme_override_fonts/normal_font = ExtResource("9_h0f07")
+theme_override_font_sizes/normal_font_size = 30
 theme_override_font_sizes/bold_font_size = 25
 theme_override_font_sizes/italics_font_size = 25
 theme_override_font_sizes/bold_italics_font_size = 25
@@ -664,6 +669,8 @@ offset_top = 20.0
 offset_right = 168.0
 offset_bottom = 44.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_h0f07")
+theme_override_font_sizes/font_size = 30
 
 [node name="Chat00" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -674,6 +681,19 @@ offset_bottom = 624.0
 
 [node name="ProximaCena" parent="." instance=ExtResource("9_58w8u")]
 position = Vector2(992, 508)
+
+[node name="Arvore01" type="Sprite2D" parent="."]
+position = Vector2(246, 564)
+scale = Vector2(0.528, 0.528)
+texture = ExtResource("11_w776g")
+
+[node name="Arvore02" type="Sprite2D" parent="."]
+position = Vector2(779, 531)
+texture = ExtResource("12_nwqr0")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_nr2ty")
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="Dialog/DialogBox/Timer" to="." method="_on_timer_timeout"]

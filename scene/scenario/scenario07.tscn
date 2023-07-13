@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://6hayt7bscan2"]
+[gd_scene load_steps=21 format=3 uid="uid://6hayt7bscan2"]
 
 [ext_resource type="Script" path="res://scene/scenario/objects.gd" id="1_qbdik"]
 [ext_resource type="Texture2D" uid="uid://cqqkdyhb611ab" path="res://assents/sceneImage/cenario08.jpg" id="2_hinj5"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://hb0cmj08noqf" path="res://npcs/raquel.tscn" id="7_jlidr"]
 [ext_resource type="Texture2D" uid="uid://c6jf0mmlqfyy2" path="res://assents/dialog.png" id="8_vw3xs"]
 [ext_resource type="PackedScene" uid="uid://c5eyut77f2tff" path="res://Text/text.tscn" id="9_0adex"]
+[ext_resource type="FontFile" uid="uid://diolq3k4p4ak1" path="res://fonts/VT323-Regular.ttf" id="9_y4m7v"]
+[ext_resource type="AudioStream" uid="uid://ddtrfgyly6ovs" path="res://assents/music/music03.mp3" id="12_8b2qb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bxdrm"]
 texture = ExtResource("2_qfe8g")
@@ -612,7 +614,7 @@ sources/5 = SubResource("TileSetAtlasSource_57q5a")
 script = ExtResource("1_qbdik")
 
 [node name="ImageScene" type="Sprite2D" parent="."]
-position = Vector2(606, 88)
+position = Vector2(614, 84)
 scale = Vector2(1.28027, 1.28027)
 texture = ExtResource("2_hinj5")
 
@@ -647,7 +649,8 @@ offset_top = 47.0
 offset_right = 751.0
 offset_bottom = 188.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 25
+theme_override_fonts/normal_font = ExtResource("9_y4m7v")
+theme_override_font_sizes/normal_font_size = 30
 theme_override_font_sizes/bold_font_size = 25
 theme_override_font_sizes/italics_font_size = 25
 theme_override_font_sizes/bold_italics_font_size = 25
@@ -665,6 +668,8 @@ offset_top = 20.0
 offset_right = 168.0
 offset_bottom = 44.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_y4m7v")
+theme_override_font_sizes/font_size = 30
 
 [node name="NPC" type="Node2D" parent="."]
 
@@ -680,6 +685,11 @@ offset_left = 861.0
 offset_top = 473.0
 offset_right = 926.0
 offset_bottom = 624.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_8b2qb")
+volume_db = -6.764
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="Dialog/DialogBox/Timer" to="." method="_on_timer_timeout"]

@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://d1aa1y0ee451s"]
+[gd_scene load_steps=8 format=3 uid="uid://d1aa1y0ee451s"]
 
 [ext_resource type="Script" path="res://scene/init_game.gd" id="1_8rxip"]
 [ext_resource type="Texture2D" uid="uid://c5l4ag3hto6ce" path="res://assents/sceneImage/cenario02.jpg" id="1_ngcw4"]
 [ext_resource type="PackedScene" uid="uid://dxvwf5u54u7ln" path="res://npcs/ruth.tscn" id="2_djroe"]
+[ext_resource type="FontFile" uid="uid://diolq3k4p4ak1" path="res://fonts/VT323-Regular.ttf" id="3_b22sd"]
 [ext_resource type="PackedScene" uid="uid://hb0cmj08noqf" path="res://npcs/raquel.tscn" id="3_hp64l"]
+[ext_resource type="Texture2D" uid="uid://chnk2kyjwmi8q" path="res://assents/O Destino das Irmãs.png" id="6_k7ftu"]
+[ext_resource type="AudioStream" uid="uid://b2dibxrk64rdw" path="res://assents/music/music01.mp3" id="7_406o1"]
 
 [node name="InitGame" type="Node2D"]
 script = ExtResource("1_8rxip")
@@ -12,18 +15,6 @@ script = ExtResource("1_8rxip")
 position = Vector2(558, 304)
 scale = Vector2(1.26758, 1.26758)
 texture = ExtResource("1_ngcw4")
-
-[node name="Titulo" type="Label" parent="."]
-offset_left = -51.0
-offset_top = -3.0
-offset_right = 486.0
-offset_bottom = 379.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 80
-text = "O Destino 
-das 
-Irmãs"
-horizontal_alignment = 1
 
 [node name="NPC" type="Node2D" parent="."]
 
@@ -40,7 +31,8 @@ offset_left = 737.0
 offset_top = 108.0
 offset_right = 1114.0
 offset_bottom = 192.0
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("3_b22sd")
+theme_override_font_sizes/font_size = 70
 text = "Jogar"
 
 [node name="ButtonCreditos" type="Button" parent="."]
@@ -48,7 +40,17 @@ offset_left = 734.0
 offset_top = 219.0
 offset_right = 1111.0
 offset_bottom = 303.0
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("3_b22sd")
+theme_override_font_sizes/font_size = 70
 text = "Créditos"
+
+[node name="ODestinoDasIrmãs" type="Sprite2D" parent="."]
+position = Vector2(393, 168)
+scale = Vector2(0.717448, 0.717448)
+texture = ExtResource("6_k7ftu")
+
+[node name="MusicIntro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_406o1")
+autoplay = true
 
 [connection signal="pressed" from="ButtonJogar" to="." method="_on_button_jogar_pressed"]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5eyut77f2tff"]
+[gd_scene load_steps=3 format=3 uid="uid://c5eyut77f2tff"]
 
 [ext_resource type="Script" path="res://Text/text.gd" id="1_f4jqn"]
+[ext_resource type="FontFile" uid="uid://diolq3k4p4ak1" path="res://fonts/VT323-Regular.ttf" id="2_7qoa1"]
 
 [node name="Text" type="Node2D"]
 script = ExtResource("1_f4jqn")
@@ -8,3 +9,5 @@ script = ExtResource("1_f4jqn")
 [node name="Label" type="Label" parent="."]
 offset_right = 385.0
 offset_bottom = 89.0
+theme_override_fonts/font = ExtResource("2_7qoa1")
+theme_override_font_sizes/font_size = 25

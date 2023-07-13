@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dumnodgdtcr67"]
+[gd_scene load_steps=21 format=3 uid="uid://dumnodgdtcr67"]
 
 [ext_resource type="Script" path="res://scene/scenario/objects.gd" id="1_mes14"]
 [ext_resource type="Texture2D" uid="uid://87mvr2cul5g1" path="res://assents/Seasonal Tilesets/Seasonal Tilesets/5 - Misc. universal tiles/Blocks (16 x 16).png" id="2_m2ht5"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c5eyut77f2tff" path="res://Text/text.tscn" id="9_1wuge"]
 [ext_resource type="Texture2D" uid="uid://pt2u7nk0ufm0" path="res://assents/Seasonal Tilesets/DALL_E_2023-07-12_15.30.34_-_cabideiro_de_roupa_em_pixel_art__em_que_tenha_uma_roupa_roxa_pendurada-removebg-preview.png" id="10_rt3x3"]
 [ext_resource type="PackedScene" uid="uid://cnvipsc5k43yv" path="res://npcs/raquel_final.tscn" id="11_xni0p"]
+[ext_resource type="AudioStream" uid="uid://b2dibxrk64rdw" path="res://assents/music/music01.mp3" id="12_0gsri"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bxdrm"]
 texture = ExtResource("2_m2ht5")
@@ -613,7 +614,7 @@ sources/5 = SubResource("TileSetAtlasSource_57q5a")
 script = ExtResource("1_mes14")
 
 [node name="ImageScene" type="Sprite2D" parent="."]
-position = Vector2(580, 99)
+position = Vector2(605, 594)
 scale = Vector2(1.2168, 1.2168)
 texture = ExtResource("2_uerri")
 
@@ -639,6 +640,11 @@ texture = ExtResource("10_rt3x3")
 flip_h = true
 
 [node name="NPC" type="Node2D" parent="."]
+position = Vector2(356, -4)
 
 [node name="RaquelFinal" parent="NPC" instance=ExtResource("11_xni0p")]
-position = Vector2(580, 530)
+position = Vector2(225, 534)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_0gsri")
+autoplay = true
