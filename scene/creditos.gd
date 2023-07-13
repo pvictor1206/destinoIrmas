@@ -1,5 +1,6 @@
 extends Node2D
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -10,9 +11,5 @@ func _process(delta):
 	pass
 
 
-func _on_button_jogar_pressed():
-	get_tree().change_scene_to_file("res://scene/world.tscn")
-
-
-func _on_button_creditos_pressed():
-	get_tree().change_scene_to_file("res://scene/creditos.tscn")
+func _on_button_inicio_pressed():
+	get_tree().change_scene_to_file("res://scene/init_game.tscn")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dumnodgdtcr67"]
+[gd_scene load_steps=23 format=3 uid="uid://dumnodgdtcr67"]
 
 [ext_resource type="Script" path="res://scene/scenario/objects.gd" id="1_mes14"]
 [ext_resource type="Texture2D" uid="uid://87mvr2cul5g1" path="res://assents/Seasonal Tilesets/Seasonal Tilesets/5 - Misc. universal tiles/Blocks (16 x 16).png" id="2_m2ht5"]
@@ -8,7 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://dx2uf85773kvt" path="res://assents/Seasonal Tilesets/Speech_Emotes (16 x 16).png" id="5_6q21d"]
 [ext_resource type="Texture2D" uid="uid://do5qagqa1ntac" path="res://assents/Seasonal Tilesets/Seasonal Tilesets/5 - Misc. universal tiles/Misc_props (16 x 16).png" id="6_6u8vo"]
 [ext_resource type="Texture2D" uid="uid://dkugs5jyvyw2o" path="res://assents/png-transparent-theater-drapes-and-stage-curtains-theatre-front-curtain-curtain-s-love-interior-design-decor-removebg-preview.png" id="7_l0dfh"]
+[ext_resource type="Texture2D" uid="uid://c6jf0mmlqfyy2" path="res://assents/dialog.png" id="8_1hiqu"]
 [ext_resource type="PackedScene" uid="uid://c5eyut77f2tff" path="res://Text/text.tscn" id="9_1wuge"]
+[ext_resource type="FontFile" uid="uid://diolq3k4p4ak1" path="res://fonts/VT323-Regular.ttf" id="9_p12wp"]
 [ext_resource type="Texture2D" uid="uid://pt2u7nk0ufm0" path="res://assents/Seasonal Tilesets/DALL_E_2023-07-12_15.30.34_-_cabideiro_de_roupa_em_pixel_art__em_que_tenha_uma_roupa_roxa_pendurada-removebg-preview.png" id="10_rt3x3"]
 [ext_resource type="PackedScene" uid="uid://cnvipsc5k43yv" path="res://npcs/raquel_final.tscn" id="11_xni0p"]
 [ext_resource type="AudioStream" uid="uid://b2dibxrk64rdw" path="res://assents/music/music01.mp3" id="12_0gsri"]
@@ -630,6 +632,45 @@ position = Vector2(577, 316.125)
 scale = Vector2(2.00693, 1.45901)
 texture = ExtResource("7_l0dfh")
 
+[node name="Dialog" type="Node2D" parent="."]
+visible = false
+
+[node name="DialogBox" type="NinePatchRect" parent="Dialog"]
+offset_left = 176.0
+offset_top = 94.0
+offset_right = 984.0
+offset_bottom = 308.0
+texture = ExtResource("8_1hiqu")
+
+[node name="Text" type="RichTextLabel" parent="Dialog/DialogBox"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 47.0
+offset_right = 751.0
+offset_bottom = 188.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("9_p12wp")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 25
+theme_override_font_sizes/italics_font_size = 25
+theme_override_font_sizes/bold_italics_font_size = 25
+theme_override_font_sizes/mono_font_size = 20
+text = "
+"
+
+[node name="Timer" type="Timer" parent="Dialog/DialogBox"]
+wait_time = 0.01
+
+[node name="person" type="Label" parent="Dialog/DialogBox"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 20.0
+offset_right = 168.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_p12wp")
+theme_override_font_sizes/font_size = 30
+
 [node name="ProximaCena" parent="." instance=ExtResource("9_1wuge")]
 position = Vector2(1014, 508)
 
@@ -648,3 +689,21 @@ position = Vector2(225, 534)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_0gsri")
 autoplay = true
+
+[node name="Chat0801" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 20.0
+offset_top = 427.0
+offset_right = 154.0
+offset_bottom = 610.0
+
+[node name="Chat0802" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 564.0
+offset_top = 475.0
+offset_right = 641.0
+offset_bottom = 627.0
+
+[connection signal="timeout" from="Dialog/DialogBox/Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Chat0801" to="." method="_on_chat_0801_pressed"]
+[connection signal="pressed" from="Chat0802" to="." method="_on_chat_0802_pressed"]

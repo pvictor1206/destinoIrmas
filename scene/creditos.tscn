@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://6mc4iiwv1h26"]
+
+[ext_resource type="Script" path="res://scene/creditos.gd" id="1_e5ipv"]
+[ext_resource type="Texture2D" uid="uid://dsyj8g5y2e3re" path="res://assents/sceneImage/cenario05.jpg" id="1_opdp2"]
+[ext_resource type="FontFile" uid="uid://diolq3k4p4ak1" path="res://fonts/VT323-Regular.ttf" id="2_wtctl"]
+[ext_resource type="AudioStream" uid="uid://b2dibxrk64rdw" path="res://assents/music/music01.mp3" id="3_mp5ef"]
+
+[node name="Creditos" type="Node2D"]
+script = ExtResource("1_e5ipv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(549, 590)
+scale = Vector2(1.25488, 1.25488)
+texture = ExtResource("1_opdp2")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -56.0
+offset_top = 152.0
+offset_right = 1090.0
+offset_bottom = 644.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_wtctl")
+theme_override_font_sizes/font_size = 25
+text = "O Destino das Irmãs
+Narrativas Multimídia
+
+
+
+Equipe:
+Enzo Ranieri Barbosa Rodrigues da Silva -  547869
+Jackson Pereira da Silva -  537215
+Lana Ellen de Lima Maia -  537542
+Paulo Victor Santos Magalhães -  511130
+Renan Carlos da Silva Nunes -  547870
+
+Trilha Sonora:
+Don't Starve OST
+
+Imagens e Sprints:
+DALL·E AI (IA para criação de imagens)
+"
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_mp5ef")
+autoplay = true
+
+[node name="ButtonInicio" type="Button" parent="."]
+offset_left = 814.0
+offset_top = 32.0
+offset_right = 1074.0
+offset_bottom = 97.0
+theme_override_fonts/font = ExtResource("2_wtctl")
+theme_override_font_sizes/font_size = 30
+text = "Voltar ao Início"
+
+[connection signal="pressed" from="ButtonInicio" to="." method="_on_button_inicio_pressed"]

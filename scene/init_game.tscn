@@ -54,3 +54,4 @@ stream = ExtResource("7_406o1")
 autoplay = true
 
 [connection signal="pressed" from="ButtonJogar" to="." method="_on_button_jogar_pressed"]
+[connection signal="pressed" from="ButtonCreditos" to="." method="_on_button_creditos_pressed"]

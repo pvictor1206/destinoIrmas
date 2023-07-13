@@ -105,6 +105,23 @@ var msq_queue07: Array = [
 	"Estou sozinha, mas tenho um sucesso que a Ruth nunca imaginaria ter."
 ]
 
+#CENA 08
+
+var msq_queue0801: Array = [
+	"Para uma noite importante, este traje que usamos durante o caminho, não é mais últil.",
+	"Então, chegamos ao fim do contrato!",
+	"Uma irmã irá morrer hoje, aquela que conquistou a fama que sempre quis.",
+	"A história foi interessante, não é mesmo?",
+]
+
+var msq_queue0802: Array = [
+	"Tantos aplausos!",
+	"Finalmente, a fama que sempre sonhei, agora é realidade.",
+	"Aquela pessoa na plateia, é muito familiar.",
+	"N..Nã..Não...",
+	"Não é possível.",
+]
+
 var clicked00 = true
 
 var clicked0101 = true
@@ -127,6 +144,9 @@ var clicked0601 = true
 var clicked0602 = true
 
 var clicked07 = true
+
+var clicked0801 = true
+var clicked0802 = true
 
 
 @onready var text := $Dialog/DialogBox/Text
@@ -153,7 +173,7 @@ func _on_button_pressed():
 
 
 func _input(event):
-	if event is InputEventKey and event.is_action_pressed("ui_accept") and (clicked00 == false or clicked0101 == false or clicked0102 == false or clicked0201 == false or clicked0202 == false or clicked0203 == false or clicked0301 == false or clicked0302 == false or clicked0401 == false or clicked0402 == false or clicked0501 == false or clicked0502 == false or clicked0601 == false or clicked0602 == false or clicked07 == false):
+	if event is InputEventKey and event.is_action_pressed("ui_accept") and (clicked00 == false or clicked0101 == false or clicked0102 == false or clicked0201 == false or clicked0202 == false or clicked0203 == false or clicked0301 == false or clicked0302 == false or clicked0401 == false or clicked0402 == false or clicked0501 == false or clicked0502 == false or clicked0601 == false or clicked0602 == false or clicked07 == false or clicked0801 == false or clicked0802 == false):
 		show_message()
 
 	
@@ -444,6 +464,50 @@ func show_message() -> void:
 			var _msg: String = msq_queue07.pop_front()
 			text.text = _msg
 			timer.start()
+			
+	# CENA 08
+	
+	if clicked0801 == false:
+		if msq_queue0801.size() == 0:
+			dialog.visible = false
+			await get_tree().create_timer(0.5).timeout
+			clicked0801 = true
+			msq_queue0801 = [
+				"Para uma noite importante, este traje que usamos durante o caminho, não é mais últil.",
+				"Então, chegamos ao fim do contrato!",
+				"Uma irmã irá morrer hoje, aquela que conquistou a fama que sempre quis.",
+				"A história foi interessante, não é mesmo?",
+			]
+
+			return
+		else:
+			text.visible_characters = 0
+			var _msg: String = msq_queue0801.pop_front()
+			text.text = _msg
+			timer.start()
+	
+	if clicked0802 == false:
+		if msq_queue0802.size() == 0:
+			dialog.visible = false
+			await get_tree().create_timer(0.5).timeout
+			clicked0802 = true
+			msq_queue0802 = [
+				"Tantos aplausos!",
+				"Finalmente, a fama que sempre sonhei, agora é realidade.",
+				"Aquela pessoa na plateia, é muito familiar.",
+				"N..Nã..Não...",
+				"Não é possível.",
+			]
+			Global.counterScene = 0
+			Global.currentState = Global.gameStates.START
+			get_tree().change_scene_to_file("res://scene/creditos.tscn")
+
+			return
+		else:
+			text.visible_characters = 0
+			var _msg: String = msq_queue0802.pop_front()
+			text.text = _msg
+			timer.start()
 
 
 
@@ -574,5 +638,21 @@ func _on_chat_07_pressed():
 	if clicked07:
 		dialog.visible = true
 		clicked07 = false
+		person.text = 'Raquel'
+		show_message()
+
+
+func _on_chat_0801_pressed():
+	if clicked0801:
+		dialog.visible = true
+		clicked0801 = false
+		person.text = 'Jogador (morte)'
+		show_message()
+
+
+func _on_chat_0802_pressed():
+	if clicked0802:
+		dialog.visible = true
+		clicked0802 = false
 		person.text = 'Raquel'
 		show_message()
